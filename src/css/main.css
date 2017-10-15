@@ -1,39 +1,300 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: arial, serif; }
+
+.fa {
+  color: #d3d3d3;
+  transition: 0.5s; }
+  .fa:hover {
+    color: #411c00;
+    cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  margin: 20px 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  font-size: 60pt;
+  line-height: 0.8; }
+
+h2 {
+  font-size: 48pt; }
+  @media only screen and (min-width: 768px) {
+    h2 {
+      font-size: 22pt; } }
+
+p {
+  font-size: 22pt; }
+  @media only screen and (min-width: 768px) {
+    p {
+      font-size: 11pt; } }
+
+ul {
+  line-height: 1.5;
+  margin-bottom: 40px; }
+  ul li {
+    list-style: square;
+    margin-left: 60px;
+    padding-left: 30px; }
 
 body {
-  background-color: #222222; }
+  background-color: #fafafa;
+  font-size: 18pt;
+  width: 100vw;
+  overflow-x: hidden; }
+  @media only screen and (min-width: 768px) {
+    body {
+      font-size: 12pt; } }
   body .header {
+    position: fixed;
+    width: 100vw;
     display: flex;
-    background-color: #fafafa; }
-  body .main {
-    max-width: 1024px;
-    margin: 0 auto; }
-    body .main .top-content {
-      display: flex; }
-    body .main .slider {
-      text-align: center; }
-      body .main .slider .slide {
-        min-height: 50px;
-        background-color: lightgray; }
-        body .main .slider .slide img {
-          width: 100%; }
-    body .main .content {
+    background-color: #fafafa;
+    padding: 20px 0;
+    z-index: 999;
+    height: 100px; }
+    @media only screen and (min-width: 768px) {
+      body .header {
+        height: 50px; } }
+    body .header .menu-left, body .header .menu-right {
+      display: none;
+      position: absolute;
+      top: 20px;
+      height: 50px;
+      align-items: center;
+      justify-content: center; }
+      @media only screen and (min-width: 768px) {
+        body .header .menu-left, body .header .menu-right {
+          display: flex; } }
+      body .header .menu-left a, body .header .menu-right a {
+        padding: 0 10px;
+        color: #0a0a0a;
+        transition: 0.33s; }
+        body .header .menu-left a:hover, body .header .menu-right a:hover {
+          padding-top: 8px; }
+    body .header .menu-left {
+      left: 100px; }
+    body .header .menu-right {
+      right: 100px; }
+    body .header .logo {
+      height: 100%;
+      margin: 0 auto; }
+      body .header .logo img {
+        height: 100%; }
+    body .header .rs {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      max-height: 100px;
+      overflow: hidden;
       display: flex;
-      justify-content: flex-start;
-      align-content: flex-start;
-      flex-wrap: wrap; }
-      body .main .content .item {
-        flex-basis: 33%;
-        background-color: darkred;
-        border: 1px solid black; }
+      flex-direction: column; }
+  body .main {
+    margin: 0 auto;
+    padding-top: 140px; }
+    @media only screen and (min-width: 768px) {
+      body .main {
+        padding-top: 90px; } }
+    body .main .fil-ariane {
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      padding: 10px 50px;
+      height: 50px;
+      font-size: 14pt; }
+      @media only screen and (min-width: 768px) {
+        body .main .fil-ariane {
+          height: 20px;
+          font-size: 11pt; } }
+      body .main .fil-ariane a {
+        color: #d3d3d3;
+        transition: 0.33s;
+        margin-right: 40px; }
+        body .main .fil-ariane a:after {
+          content: ">";
+          margin-left: 20px; }
+        body .main .fil-ariane a:last-child:after {
+          content: ""; }
+        body .main .fil-ariane a:hover {
+          color: #222222; }
+    body .main .top-content {
+      background-color: #222222;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background-color: #222222; }
+      body .main .top-content-bg {
+        position: absolute;
+        opacity: 0.3;
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+        height: 100%;
+        z-index: -1; }
+      @media only screen and (min-width: 992px) {
+        body .main .top-content {
+          flex-direction: row; } }
+      body .main .top-content .left, body .main .top-content .right {
+        padding: 40px; }
+        body .main .top-content .left .type, body .main .top-content .right .type {
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 3px;
+          margin-right: 10px; }
+        body .main .top-content .left .date, body .main .top-content .right .date {
+          color: #fff; }
+        body .main .top-content .left p, body .main .top-content .left a, body .main .top-content .left h1, body .main .top-content .left span, body .main .top-content .right p, body .main .top-content .right a, body .main .top-content .right h1, body .main .top-content .right span {
+          color: #fff; }
+        body .main .top-content .left .header-meta, body .main .top-content .right .header-meta {
+          margin-right: 10px;
+          padding-right: 10px;
+          border-right: 1px solid #aaa; }
+          body .main .top-content .left .header-meta-container, body .main .top-content .right .header-meta-container {
+            margin: 50px 0; }
+        body .main .top-content .left .CTA, body .main .top-content .right .CTA {
+          text-align: center;
+          padding-top: 20px; }
+          body .main .top-content .left .CTA .button1, body .main .top-content .right .CTA .button1 {
+            background-color: #411c00;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 40px;
+            font-weight: 700;
+            text-transform: UPPERCASE;
+            font-size: 16pt;
+            transition: 0.5s; }
+            @media only screen and (min-width: 768px) {
+              body .main .top-content .left .CTA .button1, body .main .top-content .right .CTA .button1 {
+                font-size: 12pt;
+                padding: 10px 20px;
+                font-weight: 100; } }
+            body .main .top-content .left .CTA .button1:hover, body .main .top-content .right .CTA .button1:hover {
+              background-color: black; }
+      body .main .top-content .left {
+        background-image: url(../../src/img/article/bg.png);
+        padding-bottom: 200px; }
+        @media only screen and (min-width: 768px) {
+          body .main .top-content .left {
+            padding-left: 100px; } }
+      body .main .top-content .right {
+        display: none; }
+        @media only screen and (min-width: 992px) {
+          body .main .top-content .right {
+            display: inherit; } }
+    body .main .slider {
+      text-align: center;
+      max-width: 90vw;
+      margin-left: 5vw;
+      margin-top: -100px; }
+      @media only screen and (min-width: 768px) {
+        body .main .slider {
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: -100px; } }
+      body .main .slider .slider-for .slide {
+        min-height: 50px;
+        width: 90vw;
+        height: 50vh;
+        background-color: white; }
+        body .main .slider .slider-for .slide img {
+          width: 100%; }
+          @media only screen and (min-width: 768px) {
+            body .main .slider .slider-for .slide img {
+              height: 100%;
+              width: auto;
+              margin: 0 auto; } }
+      body .main .slider .slider-nav {
+        background-color: white; }
+        body .main .slider .slider-nav .slide {
+          height: 20vh; }
+          body .main .slider .slider-nav .slide img {
+            margin: 0 auto;
+            height: 100%; }
+    body .main .content {
+      padding: 100px 100px 0px 100px;
+      max-width: 900px;
+      margin: 0 auto; }
+      body .main .content p {
+        margin: 0 0 80px;
+        line-height: 1.65; }
+      body .main .content h2 {
+        margin-bottom: 20px;
+        padding-top: 40px;
+        line-height: 1.1;
+        border-top: 2px solid #411c00; }
+    body .main .more {
+      background-color: #eee;
+      padding: 80px;
+      border-radius: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      z-index: 1;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07); }
+      @media only screen and (min-width: 768px) {
+        body .main .more {
+          padding: 40px 60px; }
+          body .main .more ul {
+            margin-top: 20px !important; } }
+      body .main .more ul {
+        margin: 0; }
+      body .main .more .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px; }
+        body .main .more .social-icons .social-icon {
+          font-size: 100px;
+          padding: 0 30px;
+          color: #d3d3d3;
+          transition: 0.5s; }
+          @media only screen and (min-width: 768px) {
+            body .main .more .social-icons .social-icon {
+              font-size: 40px; } }
+          body .main .more .social-icons .social-icon:hover {
+            color: #222222; }
     body .main .comment {
-      display: flex; }
+      background-color: rgba(60, 27, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      color: white;
+      z-index: -1;
+      justify-content: center;
+      font-size: 22pt;
+      padding-bottom: 40px; }
+      @media only screen and (min-width: 768px) {
+        body .main .comment {
+          padding-top: 150px;
+          position: relative;
+          top: -100px;
+          flex-direction: row; } }
       body .main .comment .item {
+        display: flex;
         flex-basis: 50%;
-        display: flex; }
+        padding: 50px; }
+        @media only screen and (min-width: 768px) {
+          body .main .comment .item {
+            max-width: 300px; } }
+        body .main .comment .item p {
+          font-size: 22pt; }
+          @media only screen and (min-width: 768px) {
+            body .main .comment .item p {
+              font-size: 11pt; } }
+        body .main .comment .item .av {
+          width: 400px; }
+          body .main .comment .item .av img {
+            width: 100%; }
+        body .main .comment .item p {
+          margin-left: 50px; }
 
 .footer {
-  color: white;
-  background-color: darkcyan; }
+  color: #222222 !important;
+  font-weight: 700;
+  background-color: darkcyan;
+  text-align: center;
+  padding: 50px;
+  margin-top: -80px; }
+  .footer a {
+    color: #222222;
+    text-decoration: underline; }
